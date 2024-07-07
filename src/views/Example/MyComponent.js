@@ -7,49 +7,55 @@ class MyComponent extends React.Component {
     Once state values are changed, JSX will be changed along without refreshing the page
     */
     state = {
-        name: '',
-        university: 'DUT'
+        firstName: "",
+        lastName: ""
     }
 
-    handleOnChangeName = (event) => {
-        //this.state.name = event.target.value //bad code
-        //setState will merge with object
+    handleChangeFirstName = (event) => {
         this.setState({
-            name: event.target.value
+            firstName: event.target.value
         })
-        //it will update state values immidiately
-    }
-    /*
-    parameter (event) used to get target.value
-    event is an object of html
-    */
-
-    handleClickButton = () => {
-        alert('Click me!')
     }
 
+    handleChangeLastName = (event) => {
+        this.setState({
+            lastName: event.target.value
+        })
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault() //Prevent reloading page
+        console.log('>>> Check data input: ', this.state)
+    }
     /*
     JSX allows a function of JS can return a block of html code
     JSX => return block
     */
     render() {
-        console.log(`>>> call render: `, this.state)
+        console.log(">>> render call: ", this.state)
         return (
             <>
-                <div className="first">
-                    <input value={this.state.name} type="text"
-                        onChange={(event) => this.handleOnChangeName(event)}
+                <form>
+                    <label htmlFor="fname">First name:</label><br />
+                    <input
+                        type="text"
+                        value={this.state.firstName}
+                        onChange={(event) => this.handleChangeFirstName(event)}
                     />
-                    The very first component, {this.state.name}
-                </div>
-                <div className="second">
-                    University: {this.state.university}
-                </div>
-                <div className="third">
-                    <button onClick={() => this.handleClickButton()}>Click me</button>
-                </div>
+                    <br />
+                    <label htmlFor="lname">Last name:</label><br />
+                    <input
+                        type="text"
+                        value={this.state.lastName}
+                        onChange={(event) => this.handleChangeLastName(event)}
+                    />
+                    <br /><br />
+                    <input
+                        type="submit"
+                        onClick={(event) => this.handleSubmit(event)}
+                    />
+                </form>
             </>
-
         )
     }
 }
