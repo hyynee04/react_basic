@@ -36,10 +36,20 @@ class ChildComponent extends React.Component {
         // let name = this.props.name
         // let age = this.props.age
 
-        let { name, age } = this.props //shortage syntax. Variable names must be the same as object's keys
+        let { name, age, address, arrJobs } = this.props //shortage syntax. Variable names must be the same as object's keys
         return (
             <>
-                <div>Child component name: {name} - age: {age}</div>
+                <div className="job-list">
+                    {
+                        arrJobs.map((item) => {
+                            return (
+                                <div key={item.id}>
+                                    {item.title} - {item.salary}
+                                </div>
+                            )
+                        })
+                    }
+                </div>
             </>
         )
     }
