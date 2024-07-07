@@ -7,16 +7,22 @@ class MyComponent extends React.Component {
     Once state values are changed, JSX will be changed along without refreshing the page
     */
     state = {
-        name: 'Dylan',
+        name: '',
         university: 'DUT'
     }
 
     handleOnChangeName = (event) => {
+        //this.state.name = event.target.value //bad code
+        //setState will merge with object
         this.setState({
             name: event.target.value
         })
+        //it will update state values immidiately
     }
-    /*parameter (event) used to get targer.value */
+    /*
+    parameter (event) used to get target.value
+    event is an object of html
+    */
 
     handleClickButton = () => {
         alert('Click me!')
@@ -27,6 +33,7 @@ class MyComponent extends React.Component {
     JSX => return block
     */
     render() {
+        console.log(`>>> call render: `, this.state)
         return (
             <>
                 <div className="first">
