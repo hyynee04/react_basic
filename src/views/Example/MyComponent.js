@@ -33,7 +33,7 @@ class MyComponent extends React.Component {
     JSX => return block
     */
     render() {
-        console.log(">>> render call: ", this.state)
+        //console.log(">>> render call: ", this.state)
         return (
             <>
                 <form>
@@ -57,9 +57,10 @@ class MyComponent extends React.Component {
                     />
                 </form>
 
-                <ChildComponent name={'child one'} />
-                <ChildComponent name={'child two'} />
-                <ChildComponent name={'child three'} />
+                <ChildComponent
+                    name={'Dylan'}
+                    age={'21'}
+                />
             </>
         )
     }
