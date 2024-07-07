@@ -16,6 +16,11 @@ class MyComponent extends React.Component {
             name: event.target.value
         })
     }
+    /*parameter (event) used to get targer.value */
+
+    handleClickButton = () => {
+        alert('Click me!')
+    }
 
     /*
     JSX allows a function of JS can return a block of html code
@@ -32,6 +37,9 @@ class MyComponent extends React.Component {
                 </div>
                 <div className="second">
                     University: {this.state.university}
+                </div>
+                <div className="third">
+                    <button onClick={() => this.handleClickButton()}>Click me</button>
                 </div>
             </>
 
