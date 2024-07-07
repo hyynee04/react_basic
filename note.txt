@@ -35,3 +35,7 @@ structure:
 -----------------------------------------------
 - add event to input tag in order to change it's value directly
 - Get data from form
+    - event.preventDefault() //Prevent reloading page when press submit
+------------------------------------------------
+Nesting Component:
+    - 
