@@ -17,7 +17,9 @@ structure:
     - delete App.test.js (this one for tester but being deleted is okay)
     - Move App.js, App.scss (original is App.css), logo.svg to views. Remember to change import paths in path.js and App.js
     - Create a file named global.scss in styles (it's a copy of index.css), import the file to index.js
+
 ----------------------------------------------
+
 - 2 kind of components:
     - Class components
         class name extends React.Component {
@@ -29,24 +31,47 @@ structure:
 - Components work seperatly
 - Components use JSX ( a function of JS returning a html code block not a variable)
 - After creating a component, export it and import it to another file
+
 -----------------------------------------------
+
 - HTML DOM (Document Object Model) can be understand as the lay-out of html page
 - DOM events: events that happen on page
+
 -----------------------------------------------
+
 - add event to input tag in order to change it's value directly
 - Get data from form
     - event.preventDefault() //Prevent reloading page when press submit
+
 ------------------------------------------------
+
 Nesting Component
+
 ------------------------------------------------
+
 Props (Property) used to send data
     - data can only be sent from parent component to child components
     - data can be strings, numbers, objects, arrays
     - let { var1, var2, ...} = this.props //var1, var2 , ... must be the same as object's keys
+
 ------------------------------------------------
+
 - Stateless component => function component (no need keyword 'this', props now be a parameter of the function)
     => Use class component to avoid changing in the future 'cause we can add states when need
+
 ------------------------------------------------
+
 Conditional Output: have conditions when render outputs
 Split components:
     - Why: to reuse components when needed
+
+<></> this can be used to create space between element in the same row
+
+------------------------------------------------
+
+Advance:
+    -[...this.state.arrJobs, job]: 
+        '...' (spread syntax) a copy operator => '...this.state.arrJobs': it will copy arrJobs
+        ', job': it will add job as the last element of the copy array created before
+        => setState to the original array (arrJobs: [...this.state.arrJobs, job])
+        document: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
