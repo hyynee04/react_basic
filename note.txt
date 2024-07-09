@@ -86,6 +86,14 @@ inline style: style = {{ color: 'red'}}
 
 ------------------------------------------------
 
+Lifecycle method:
+    - Mounting: componentDidMount() {}: will be call after components rendered
+        + this should contain API 
+    - Updating: componentDidUpdate(prevProps, prevState) {}: used when updating between parent and child - Another way: Debug
+document: https://legacy.reactjs.org/docs/react-component.html
+
+------------------------------------------------
+
 Advance:
     -[...this.state.arrJobs, job]: 
         '...' (spread syntax) a copy operator => '...this.state.arrJobs': it will copy arrJobs

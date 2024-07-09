@@ -20,8 +20,8 @@ class ChildComponent extends React.Component {
     render() {
         let { arrJobs } = this.props //shortage syntax. Variable names must be the same as object's keys
         let { showJobs } = this.state
-        let check = showJobs === true ? 'showJobs = true' : 'showJobs = false'
-        console.log('>>> Check condition: ', check)
+        // let check = showJobs === true ? 'showJobs = true' : 'showJobs = false'
+        // console.log('>>> Check condition: ', check)
         //Condition using operator (condition? (true)result1: (false)result2)
         return (
             <>
