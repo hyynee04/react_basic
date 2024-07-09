@@ -48,3 +48,5 @@ Props (Property) used to send data
     => Use class component to avoid changing in the future 'cause we can add states when need
 ------------------------------------------------
 Conditional Output: have conditions when render outputs
+Split components:
+    - Why: to reuse components when needed
