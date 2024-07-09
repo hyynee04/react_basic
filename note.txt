@@ -2,7 +2,7 @@ command:
     - npx create-react-app name
     - npm start
 
---------------------------------------------
+------------------------------------------------
 
 structure:
     - Create folders inside folder src.
@@ -19,7 +19,7 @@ structure:
     - Move App.js, App.scss (original is App.css), logo.svg to views. Remember to change import paths in path.js and App.js
     - Create a file named global.scss in styles (it's a copy of index.css), import the file to index.js
 
-----------------------------------------------
+------------------------------------------------
 
 - 2 kind of components:
     - Class components
@@ -33,12 +33,12 @@ structure:
 - Components use JSX ( a function of JS returning a html code block not a variable)
 - After creating a component, export it and import it to another file
 
------------------------------------------------
+------------------------------------------------
 
 - HTML DOM (Document Object Model) can be understand as the lay-out of html page
 - DOM events: events that happen on page
 
------------------------------------------------
+------------------------------------------------
 
 - add event to input tag in order to change it's value directly
 - Get data from form
@@ -72,6 +72,17 @@ Split components:
 
 Virtual DOM is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory and synced with the “real” DOM by a library such as ReactDOM.
 document: https://legacy.reactjs.org/docs/faq-internals.html
+
+------------------------------------------------
+
+SCSS is CSS in react
+    - reduces repetition of CSS and therefore saves time.
+    - it's stronger than css
+    - used in reallife project
+(similar: less, sass)
+document: https://www.w3schools.com/sass/
+
+inline style: style = {{ color: 'red'}}
 
 ------------------------------------------------
 

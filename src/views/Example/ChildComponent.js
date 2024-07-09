@@ -1,4 +1,5 @@
 import React from "react";
+import './Demo.scss'
 
 class ChildComponent extends React.Component {
     state = {
@@ -15,6 +16,7 @@ class ChildComponent extends React.Component {
         console.log(`>>> Check handleDelete: `, job)
         this.props.deleteAJob(job)
     }
+
     render() {
         let { arrJobs } = this.props //shortage syntax. Variable names must be the same as object's keys
         let { showJobs } = this.state
@@ -28,6 +30,7 @@ class ChildComponent extends React.Component {
                         <input
                             type="button"
                             value={'Show'}
+                            className="btn-show"
                             onClick={() => this.handleShowHide()}
                         />
                         :
