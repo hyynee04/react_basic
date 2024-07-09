@@ -3,6 +3,7 @@ command:
     - npm start
 
 --------------------------------------------
+
 structure:
     - Create folders inside folder src.
         - assets is global, has files (images, audio) that are public.
@@ -66,6 +67,11 @@ Split components:
     - Why: to reuse components when needed
 
 <></> this can be used to create space between element in the same row
+
+------------------------------------------------
+
+Virtual DOM is a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory and synced with the “real” DOM by a library such as ReactDOM.
+document: https://legacy.reactjs.org/docs/faq-internals.html
 
 ------------------------------------------------
 
