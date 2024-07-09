@@ -1,6 +1,9 @@
 command:
     - npx create-react-app name
     - npm start
+    Toastify teplate:
+    - npm install --save-exact react-toastify@8.0.2 //version 8.0.2
+        document: https://www.npmjs.com/package/react-toastify?activeTab=readme
 
 ------------------------------------------------
 

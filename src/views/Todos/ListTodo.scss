@@ -1,0 +1,40 @@
+.list-todo-container {
+    button {
+        cursor: pointer;
+    }
+    .add-todo{
+        button {
+            margin-left: 10px;
+        }
+    }
+
+    .list-todo-content {
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    .todo-child {
+        min-height: 40px;
+        margin: 10px 0 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &:first-child {
+            margin-top: 30px;
+        }
+
+        span {
+            text-align: left;
+        }
+
+        .btns {
+            min-width: 30%;
+            display: flex;
+            justify-content: flex-end;
+            button {
+                margin-left: 5px;
+            }
+        }
+    }
+}
