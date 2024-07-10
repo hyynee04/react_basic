@@ -16,6 +16,7 @@
     .todo-child {
         min-height: 40px;
         margin: 10px 0 5px;
+        border-bottom: 1px solid grey;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -26,6 +27,13 @@
 
         span {
             text-align: left;
+        }
+
+        .edit-todo {
+            background-color: transparent;
+            color: white;
+            font-size: 1rem;
+            border: 1px solid grey;
         }
 
         .btns {
