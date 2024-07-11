@@ -40,7 +40,7 @@ class ListTodo extends React.Component {
             let isTitleEmpty = editTodo.title.length === 0
             if (isTitleEmpty === false) {
                 let listTodosCopy = [...listTodos]
-                let objIndex = listTodosCopy.findIndex((item => item.id == todo.id))
+                let objIndex = listTodosCopy.findIndex((item => item.id === todo.id))
                 listTodosCopy[objIndex].title = editTodo.title
                 this.setState({
                     listTodos: listTodosCopy,
@@ -84,6 +84,7 @@ class ListTodo extends React.Component {
 
         return (
             <>
+                <p>Simple TODO App with ReactJS</p>
                 <div className="list-todo-container">
                     <AddTodo
                         addNewTodo={this.addNewTodo}
